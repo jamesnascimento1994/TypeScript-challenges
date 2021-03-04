@@ -17,3 +17,18 @@ Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutio
 // console.log(sakuraFall(5));
 // console.log(sakuraFall(8));
 // console.log(sakuraFall(-7));
+
+/* 
+Challenge Two: Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed. For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/typescript
+NOTE: the setup in my text editor is a little bit different than the setup in Codewars.
+*/
+
+export function disemvowel(str: string) {
+    return str.replace(/[aeiou]/gi, "");
+}
+
+// TESTS
+console.log(disemvowel("This website is for losers LOL"));
+console.log(disemvowel("Trolling on and on"));
+console.log(disemvowel("Now are for real?"));

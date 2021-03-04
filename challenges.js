@@ -4,19 +4,30 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-// exports.sakuraFall = void 0;
-// function sakuraFall(v) {
-//     var distanceFell = 400;
+exports.disemvowel = void 0;
+// export function sakuraFall(v: number): number {
+//     let distanceFell = 400;
 //     if (v > 0) {
-//         var howManySeconds = distanceFell / v;
+//         let howManySeconds = distanceFell / v;
 //         return howManySeconds;
-//     }
-//     else {
+//     } else {
 //         return 0;
 //     }
 // }
-// exports.sakuraFall = sakuraFall;
 // // TESTS
 // console.log(sakuraFall(5));
 // console.log(sakuraFall(8));
 // console.log(sakuraFall(-7));
+/*
+Challenge Two: Trolls are attacking your comment section! A common way to deal with this situation is to remove all of the vowels from the trolls' comments, neutralizing the threat. Your task is to write a function that takes a string and return a new string with all vowels removed. For example, the string "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
+Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/typescript
+NOTE: the setup in my text editor is a little bit different than the setup in Codewars.
+*/
+function disemvowel(str) {
+    return str.replace(/[aeiou]/gi, "");
+}
+exports.disemvowel = disemvowel;
+// TESTS
+console.log(disemvowel("This website is for losers LOL"));
+console.log(disemvowel("Trolling on and on"));
+console.log(disemvowel("Now are for real?"));
