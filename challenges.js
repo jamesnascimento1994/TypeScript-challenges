@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.disemvowel = void 0;
+exports.multiply = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -23,11 +23,27 @@ Challenge Two: Trolls are attacking your comment section! A common way to deal w
 Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/typescript
 NOTE: the setup in my text editor is a little bit different than the setup in Codewars.
 */
-function disemvowel(str) {
-    return str.replace(/[aeiou]/gi, "");
-}
-exports.disemvowel = disemvowel;
+// export function disemvowel(str: string) {
+//     return str.replace(/[aeiou]/gi, "");
+// }
+// // TESTS
+// console.log(disemvowel("This website is for losers LOL"));
+// console.log(disemvowel("Trolling on and on"));
+// console.log(disemvowel("Now are for real?"));
+/*
+Challenge Three: This code does not execute properly. Try to figure out why.
+Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/typescript
+*/
+// Starter code
+// export function multiply(a: number, b: number): number {
+//     return a + b;
+// }
+// Solution
+// function multiply(a, b) {
+//     return a * b;
+// }
+exports.multiply = multiply;
 // TESTS
-console.log(disemvowel("This website is for losers LOL"));
-console.log(disemvowel("Trolling on and on"));
-console.log(disemvowel("Now are for real?"));
+// console.log(multiply(3, 4));
+// console.log(multiply(2, 6));
+// console.log(multiply(7, 8));

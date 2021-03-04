@@ -24,11 +24,31 @@ Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/typescr
 NOTE: the setup in my text editor is a little bit different than the setup in Codewars.
 */
 
-export function disemvowel(str: string) {
-    return str.replace(/[aeiou]/gi, "");
-}
+// export function disemvowel(str: string) {
+//     return str.replace(/[aeiou]/gi, "");
+// }
+
+// // TESTS
+// console.log(disemvowel("This website is for losers LOL"));
+// console.log(disemvowel("Trolling on and on"));
+// console.log(disemvowel("Now are for real?"));
+
+/* 
+Challenge Three: This code does not execute properly. Try to figure out why.
+Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/typescript
+*/
+
+// Starter code
+// export function multiply(a: number, b: number): number {
+//     return a + b;
+// }
+
+// Solution
+// export function multiply(a: number, b: number): number {
+//     return a * b;
+// }
 
 // TESTS
-console.log(disemvowel("This website is for losers LOL"));
-console.log(disemvowel("Trolling on and on"));
-console.log(disemvowel("Now are for real?"));
+// console.log(multiply(3, 4));
+// console.log(multiply(2,6));
+// console.log(multiply(7,8));
