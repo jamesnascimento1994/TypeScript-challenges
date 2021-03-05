@@ -52,3 +52,21 @@ Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/typescr
 // console.log(multiply(3, 4));
 // console.log(multiply(2,6));
 // console.log(multiply(7,8));
+
+/* 
+Challenge Four: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String). Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/typescript 
+*/
+
+export function hello(name = ''): string {
+    if (name) {
+        return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
+    } else {
+        return "Hello, World!";
+    }
+}
+
+// TESTS
+console.log(hello("jAmEs"));
+console.log(hello());
+console.log(hello(""));

@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.multiply = void 0;
+exports.hello = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -39,11 +39,28 @@ Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/typescr
 //     return a + b;
 // }
 // Solution
-// function multiply(a, b) {
+// export function multiply(a: number, b: number): number {
 //     return a * b;
 // }
-exports.multiply = multiply;
 // TESTS
 // console.log(multiply(3, 4));
-// console.log(multiply(2, 6));
-// console.log(multiply(7, 8));
+// console.log(multiply(2,6));
+// console.log(multiply(7,8));
+/*
+Challenge Four: Define a method hello that returns "Hello, Name!" to a given name, or says Hello, World! if name is not given (or passed as an empty String). Assuming that name is a String and it checks for user typos to return a name with a first capital letter (Xxxx).
+Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/typescript
+*/
+// function hello(name) {
+//     if (name === void 0) { name = ''; }
+//     if (name) {
+//         return "Hello, " + name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase() + '!';
+//     }
+//     else {
+//         return "Hello, World!";
+//     }
+// }
+exports.hello = hello;
+// // TESTS
+// console.log(hello("jAmEs"));
+// console.log(hello());
+// console.log(hello(""));
