@@ -58,15 +58,42 @@ Challenge Four: Define a method hello that returns "Hello, Name!" to a given nam
 Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/typescript 
 */
 
-export function hello(name = ''): string {
-    if (name) {
-        return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
-    } else {
-        return "Hello, World!";
-    }
+// export function hello(name = ''): string {
+//     if (name) {
+//         return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
+//     } else {
+//         return "Hello, World!";
+//     }
+// }
+
+// // TESTS
+// console.log(hello("jAmEs"));
+// console.log(hello());
+// console.log(hello(""));
+
+/* 
+Challenge Twenty-Seven: You live in the city of Cartesia where all roads are laid out in a perfect grid. You arrived ten minutes too early to an appointment, so you decided to take the opportunity to go for a short walk. The city provides its citizens with a Walk Generating App on their phones -- everytime you press the button it sends you an array of one-letter strings representing directions to walk (eg. ['n', 's', 'w', 'e']). You always walk only a single block for each letter (direction) and you know it takes you one minute to traverse one city block, so create a function that will return true if the walk the app gives you will take you exactly ten minutes (you don't want to be early or late!) and will, of course, return you to your starting point. Return false otherwise.
+Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescript
+*/
+
+export function isValidWalk(walk: string[]) {
+  let ns = 0;
+  let we = 0;
+  for (let dir of walk) {
+    if (dir == 'n') ns += 1;
+    if (dir == 's') ns -= 1;
+    if (dir == 'w') we += 1;
+    if (dir == 'e') we -= 1;
+  }
+  if (ns === 0 && we === 0 && walk.length === 10) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 // TESTS
-console.log(hello("jAmEs"));
-console.log(hello());
-console.log(hello(""));
+console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));
+console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
+console.log(isValidWalk(['w']));
+console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']));
