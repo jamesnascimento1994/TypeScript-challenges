@@ -122,7 +122,7 @@ Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
 // console.log(arr(4));
 // console.log(arr(0));
 
-/* Challenge Seven: Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+/* Challenge Eight: Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
 Challenge Source: https://www.codewars.com/kata/5467e4d82edf8bbf40000155
 */
 
