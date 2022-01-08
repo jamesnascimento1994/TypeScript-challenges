@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.arr = void 0;
+exports.descendingOrder = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -98,12 +98,20 @@ Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescr
 /* Challenge Seven: We want an array, but not just any old array, an array with contents! Write a function that produces an array with the numbers 0 to N-1 in it.
 Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
 */
-var arr = function (n) {
-    if (n === void 0) { n = 0; }
-    return Array.from({ length: n }, function (_, i) { return i; });
-};
-exports.arr = arr;
+// export const arr = (n = 0): number[] => Array.from({length: n}, (_, i) => i);
+// // TESTS
+// console.log(arr());
+// console.log(arr(4));
+// console.log(arr(0));
+/* Challenge Seven: Your task is to make a function that can take any non-negative integer as an argument and return it with its digits in descending order. Essentially, rearrange the digits to create the highest possible number.
+Challenge Source: https://www.codewars.com/kata/5467e4d82edf8bbf40000155
+*/
+function descendingOrder(n) {
+    // your code here
+    return (parseFloat(n.toString().split('').sort().reverse().join('')) * Math.sign(n));
+}
+exports.descendingOrder = descendingOrder;
 // TESTS
-console.log(exports.arr());
-console.log(exports.arr(4));
-console.log(exports.arr(0));
+console.log(descendingOrder(42145));
+console.log(descendingOrder(145263));
+console.log(descendingOrder(123456789));
