@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.getCount = void 0;
+exports.arr = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -85,13 +85,25 @@ Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescr
 // console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
 // console.log(isValidWalk(['w']));
 // console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']));
-// Challenge Six: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
-// Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescript
-function getCount(str) {
-    return str.replace(/[^aeiou]/gi, '').length;
-}
-exports.getCount = getCount;
+/* Challenge Six: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
+Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescript
+*/
+// export function getCount(str: string) {
+//     return str. replace(/[^aeiou]/gi,''). length;
+// }
+// // TESTS
+// console.log(getCount("vowel"));
+// console.log(getCount('cover'));
+// console.log(getCount('cranium'));
+/* Challenge Seven: We want an array, but not just any old array, an array with contents! Write a function that produces an array with the numbers 0 to N-1 in it.
+Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
+*/
+var arr = function (n) {
+    if (n === void 0) { n = 0; }
+    return Array.from({ length: n }, function (_, i) { return i; });
+};
+exports.arr = arr;
 // TESTS
-console.log(getCount("vowel"));
-console.log(getCount('cover'));
-console.log(getCount('cranium'));
+console.log(exports.arr());
+console.log(exports.arr(4));
+console.log(exports.arr(0));

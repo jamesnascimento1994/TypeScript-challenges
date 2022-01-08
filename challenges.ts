@@ -98,8 +98,9 @@ Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescr
 // console.log(isValidWalk(['w']));
 // console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s']));
 
-// Challenge Six: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
-// Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescript
+/* Challenge Six: Return the number (count) of vowels in the given string. We will consider a, e, i, o, u as vowels for this Kata (but not y). The input string will only consist of lower case letters and/or spaces.
+Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescript
+*/
 
 // export function getCount(str: string) {
 //     return str. replace(/[^aeiou]/gi,''). length;
@@ -109,3 +110,14 @@ Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescr
 // console.log(getCount("vowel"));
 // console.log(getCount('cover'));
 // console.log(getCount('cranium'));
+
+/* Challenge Seven: We want an array, but not just any old array, an array with contents! Write a function that produces an array with the numbers 0 to N-1 in it.
+Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
+*/
+
+export const arr = (n = 0): number[] => Array.from({length: n}, (_, i) => i);
+
+// TESTS
+console.log(arr());
+console.log(arr(4));
+console.log(arr(0));
