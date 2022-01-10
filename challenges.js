@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.duplicateCount = void 0;
+exports.pigIt = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -142,20 +142,37 @@ NOTE: The MORSE_CODE variable is exclusive to codewars. I'm not sure how to fix 
 Challenge Ten: Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
 Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
 */
-function duplicateCount(text) {
-    //...
-    var lowerCaseText = text.toLowerCase();
-    var splitText = lowerCaseText.split("");
-    return splitText.filter(function (val, i, arr) {
-        return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
-    }).length;
-}
-exports.duplicateCount = duplicateCount;
+// export function duplicateCount(text: string): number {
+//     //...
+//     let lowerCaseText = text.toLowerCase();
+//     let splitText = lowerCaseText.split("");
+//     return splitText.filter((val, i, arr) => {
+//       return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+//     }).length;
+// }
+// // TESTS
+// console.log(duplicateCount("abcde"));
+// console.log(duplicateCount("aabbcde"));
+// console.log(duplicateCount("aabBcde"));
+// console.log(duplicateCount("indivisibility"));
+// console.log(duplicateCount("Indivisibilities"));
+// console.log(duplicateCount("aA11"));
+// console.log(duplicateCount("ABBA"));
+/*
+Challenge Eleven: Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+Challenge Source: https://www.codewars.com/kata/520b9d2ad5c005041100000f
+*/
+var pigIt = function (a) {
+    // code away
+    var words = a.split(" ");
+    var pigLatinWords = words.map(function (word) {
+        if (!/\w/.test(word))
+            return word;
+        return word.substr(1) + word.charAt(0) + 'ay';
+    });
+    return pigLatinWords.join(" ");
+};
+exports.pigIt = pigIt;
 // TESTS
-console.log(duplicateCount("abcde"));
-console.log(duplicateCount("aabbcde"));
-console.log(duplicateCount("aabBcde"));
-console.log(duplicateCount("indivisibility"));
-console.log(duplicateCount("Indivisibilities"));
-console.log(duplicateCount("aA11"));
-console.log(duplicateCount("ABBA"));
+console.log(exports.pigIt('Pig latin is cool'));
+console.log(exports.pigIt('Hello world !'));

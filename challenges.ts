@@ -169,20 +169,41 @@ Challenge Ten: Write a function that will return the count of distinct case-inse
 Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
 */
 
-export function duplicateCount(text: string): number {
-    //...
-    let lowerCaseText = text.toLowerCase();
-    let splitText = lowerCaseText.split("");
-    return splitText.filter((val, i, arr) => {
-      return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
-    }).length;
+// export function duplicateCount(text: string): number {
+//     //...
+//     let lowerCaseText = text.toLowerCase();
+//     let splitText = lowerCaseText.split("");
+//     return splitText.filter((val, i, arr) => {
+//       return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+//     }).length;
+// }
+
+// // TESTS
+// console.log(duplicateCount("abcde"));
+// console.log(duplicateCount("aabbcde"));
+// console.log(duplicateCount("aabBcde"));
+// console.log(duplicateCount("indivisibility"));
+// console.log(duplicateCount("Indivisibilities"));
+// console.log(duplicateCount("aA11"));
+// console.log(duplicateCount("ABBA"));
+
+/* 
+Challenge Eleven: Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+Challenge Source: https://www.codewars.com/kata/520b9d2ad5c005041100000f
+*/
+
+export const pigIt = (a : string) : string =>  {
+    // code away
+    let words = a.split(" ");
+    let pigLatinWords = words.map((word) => {
+      if (!/\w/.test(word)) return word;
+      
+      return word.substr(1) + word.charAt(0) + 'ay';
+    });
+    
+    return pigLatinWords.join(" ");
 }
 
 // TESTS
-console.log(duplicateCount("abcde"));
-console.log(duplicateCount("aabbcde"));
-console.log(duplicateCount("aabBcde"));
-console.log(duplicateCount("indivisibility"));
-console.log(duplicateCount("Indivisibilities"));
-console.log(duplicateCount("aA11"));
-console.log(duplicateCount("ABBA"));
+console.log(pigIt('Pig latin is cool'));
+console.log(pigIt('Hello world !'));
