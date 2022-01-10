@@ -161,4 +161,28 @@ NOTE: The MORSE_CODE variable is exclusive to codewars. I'm not sure how to fix 
 //     return joinedMorseCode;
 // }
 
+// // TESTS
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
+
+/* 
+Challenge Ten: Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+*/
+
+export function duplicateCount(text: string): number {
+    //...
+    let lowerCaseText = text.toLowerCase();
+    let splitText = lowerCaseText.split("");
+    return splitText.filter((val, i, arr) => {
+      return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+    }).length;
+}
+
+// TESTS
+console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabbcde"));
+console.log(duplicateCount("aabBcde"));
+console.log(duplicateCount("indivisibility"));
+console.log(duplicateCount("Indivisibilities"));
+console.log(duplicateCount("aA11"));
+console.log(duplicateCount("ABBA"));

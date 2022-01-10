@@ -4,7 +4,7 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 exports.__esModule = true;
-exports.decodeMorse = void 0;
+exports.duplicateCount = void 0;
 // export function sakuraFall(v: number): number {
 //     let distanceFell = 400;
 //     if (v > 0) {
@@ -128,13 +128,34 @@ Challenge Source: https://www.codewars.com/kata/54b724efac3d5402db00065e
 
 NOTE: The MORSE_CODE variable is exclusive to codewars. I'm not sure how to fix the error on VS code without having to create a giant array of every letter with its morse code.
 */
-// function decodeMorse(morseCode) {
+// export function decodeMorse(morseCode: string): string {
 //     // your code here
-//     var trimmedMorseCode = morseCode.trim();
-//     var splitMorseCode = trimmedMorseCode.split(/  | /);
-//     var mappedMorseCode = splitMorseCode.map(function (morse) { return MORSE_CODE[morse] || ' '; });
-//     var joinedMorseCode = mappedMorseCode.join('');
+//     let trimmedMorseCode = morseCode.trim();
+//     let splitMorseCode = trimmedMorseCode.split(/  | /);
+//     let mappedMorseCode = splitMorseCode.map((morse) =>  MORSE_CODE[morse] || ' ');
+//     let joinedMorseCode = mappedMorseCode.join('');
 //     return joinedMorseCode;
 // }
-// exports.decodeMorse = decodeMorse;
+// // TESTS
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
+/*
+Challenge Ten: Write a function that will return the count of distinct case-insensitive alphabetic characters and numeric digits that occur more than once in the input string. The input string can be assumed to contain only alphabets (both uppercase and lowercase) and numeric digits.
+Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
+*/
+function duplicateCount(text) {
+    //...
+    var lowerCaseText = text.toLowerCase();
+    var splitText = lowerCaseText.split("");
+    return splitText.filter(function (val, i, arr) {
+        return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+    }).length;
+}
+exports.duplicateCount = duplicateCount;
+// TESTS
+console.log(duplicateCount("abcde"));
+console.log(duplicateCount("aabbcde"));
+console.log(duplicateCount("aabBcde"));
+console.log(duplicateCount("indivisibility"));
+console.log(duplicateCount("Indivisibilities"));
+console.log(duplicateCount("aA11"));
+console.log(duplicateCount("ABBA"));
