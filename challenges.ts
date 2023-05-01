@@ -3,17 +3,17 @@ Challenge One: When it's spring Japanese cherries blossom, it's called "sakura" 
 Challenge Source: https://www.codewars.com/kata/5a0be7ea8ba914fc9c00006b/solutions/typescript
 */
 
-// export function sakuraFall(v: number): number {
-//     let distanceFell = 400;
-//     if (v > 0) {
-//         let howManySeconds = distanceFell / v;
-//         return howManySeconds;
-//     } else {
-//         return 0;
-//     }
-// }
+export function sakuraFall(v: number): number {
+    let distanceFell = 400;
+    if (v > 0) {
+        let howManySeconds = distanceFell / v;
+        return howManySeconds;
+    } else {
+        return 0;
+    }
+}
 
-// // TESTS
+// TESTS
 // console.log(sakuraFall(5));
 // console.log(sakuraFall(8));
 // console.log(sakuraFall(-7));
@@ -24,11 +24,11 @@ Challenge Source: https://www.codewars.com/kata/52fba66badcd10859f00097e/typescr
 NOTE: the setup in my text editor is a little bit different than the setup in Codewars.
 */
 
-// export function disemvowel(str: string) {
-//     return str.replace(/[aeiou]/gi, "");
-// }
+export function disemvowel(str: string) {
+    return str.replace(/[aeiou]/gi, "");
+}
 
-// // TESTS
+// TESTS
 // console.log(disemvowel("This website is for losers LOL"));
 // console.log(disemvowel("Trolling on and on"));
 // console.log(disemvowel("Now are for real?"));
@@ -44,9 +44,9 @@ Challenge Source: https://www.codewars.com/kata/50654ddff44f800200000004/typescr
 // }
 
 // Solution
-// export function multiply(a: number, b: number): number {
-//     return a * b;
-// }
+export function multiply(a: number, b: number): number {
+    return a * b;
+}
 
 // TESTS
 // console.log(multiply(3, 4));
@@ -58,15 +58,15 @@ Challenge Four: Define a method hello that returns "Hello, Name!" to a given nam
 Challenge Source: https://www.codewars.com/kata/57e3f79c9cb119374600046b/typescript 
 */
 
-// export function hello(name = ''): string {
-//     if (name) {
-//         return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
-//     } else {
-//         return "Hello, World!";
-//     }
-// }
+export function hello(name = ''): string {
+    if (name) {
+        return "Hello, " + name.substring(0,1).toUpperCase() + name.substring(1).toLowerCase() + '!';
+    } else {
+        return "Hello, World!";
+    }
+}
 
-// // TESTS
+// TESTS
 // console.log(hello("jAmEs"));
 // console.log(hello());
 // console.log(hello(""));
@@ -76,23 +76,23 @@ Challenge Five: You live in the city of Cartesia where all roads are laid out in
 Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescript
 */
 
-// export function isValidWalk(walk: string[]) {
-//   let ns = 0;
-//   let we = 0;
-//   for (let dir of walk) {
-//     if (dir == 'n') ns += 1;
-//     if (dir == 's') ns -= 1;
-//     if (dir == 'w') we += 1;
-//     if (dir == 'e') we -= 1;
-//   }
-//   if (ns === 0 && we === 0 && walk.length === 10) {
-//     return true;
-//   } else {
-//     return false;
-//   }
-// }
+export function isValidWalk(walk: string[]) {
+  let ns = 0;
+  let we = 0;
+  for (let dir of walk) {
+    if (dir == 'n') ns += 1;
+    if (dir == 's') ns -= 1;
+    if (dir == 'w') we += 1;
+    if (dir == 'e') we -= 1;
+  }
+  if (ns === 0 && we === 0 && walk.length === 10) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-// // TESTS
+// TESTS
 // console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s']));
 // console.log(isValidWalk(['w','e','w','e','w','e','w','e','w','e','w','e']));
 // console.log(isValidWalk(['w']));
@@ -102,11 +102,11 @@ Challenge Source: https://www.codewars.com/kata/54da539698b8a2ad76000228/typescr
 Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescript
 */
 
-// export function getCount(str: string) {
-//     return str. replace(/[^aeiou]/gi,''). length;
-// }
+export function getCount(str: string) {
+    return str. replace(/[^aeiou]/gi,''). length;
+}
 
-// // TESTS
+// TESTS
 // console.log(getCount("vowel"));
 // console.log(getCount('cover'));
 // console.log(getCount('cranium'));
@@ -115,9 +115,9 @@ Challenge Source: https://www.codewars.com/kata/54ff3102c1bad923760001f3/typescr
 Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
 */
 
-// export const arr = (n = 0): number[] => Array.from({length: n}, (_, i) => i);
+export const arr = (n = 0): number[] => Array.from({length: n}, (_, i) => i);
 
-// // TESTS
+// TESTS
 // console.log(arr());
 // console.log(arr(4));
 // console.log(arr(0));
@@ -126,16 +126,16 @@ Challenge Source: https://www.codewars.com/kata/571d42206414b103dc0006a1
 Challenge Source: https://www.codewars.com/kata/5467e4d82edf8bbf40000155
 */
 
-// export function descendingOrder(n: number): number {
-//     // your code here
-//     return (
-//       parseFloat(
-//         n.toString().split('').sort().reverse().join('')
-//       ) * Math.sign(n)
-//     )
-// }
+export function descendingOrder(n: number): number {
+    // your code here
+    return (
+      parseFloat(
+        n.toString().split('').sort().reverse().join('')
+      ) * Math.sign(n)
+    )
+}
 
-// // TESTS
+// TESTS
 // console.log(descendingOrder(42145));
 // console.log(descendingOrder(145263));
 // console.log(descendingOrder(123456789));
@@ -161,7 +161,7 @@ NOTE: The MORSE_CODE variable is exclusive to codewars. I'm not sure how to fix 
 //     return joinedMorseCode;
 // }
 
-// // TESTS
+// TESTS
 // console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
 
 /* 
@@ -169,16 +169,16 @@ Challenge Ten: Write a function that will return the count of distinct case-inse
 Challenge Source: https://www.codewars.com/kata/54bf1c2cd5b56cc47f0007a1
 */
 
-// export function duplicateCount(text: string): number {
-//     //...
-//     let lowerCaseText = text.toLowerCase();
-//     let splitText = lowerCaseText.split("");
-//     return splitText.filter((val, i, arr) => {
-//       return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
-//     }).length;
-// }
+export function duplicateCount(text: string): number {
+    //...
+    let lowerCaseText = text.toLowerCase();
+    let splitText = lowerCaseText.split("");
+    return splitText.filter((val, i, arr) => {
+      return arr.indexOf(val) !== i && arr.lastIndexOf(val) === i;
+    }).length;
+}
 
-// // TESTS
+// TESTS
 // console.log(duplicateCount("abcde"));
 // console.log(duplicateCount("aabbcde"));
 // console.log(duplicateCount("aabBcde"));
@@ -205,5 +205,31 @@ export const pigIt = (a : string) : string =>  {
 }
 
 // TESTS
-console.log(pigIt('Pig latin is cool'));
-console.log(pigIt('Hello world !'));
+// console.log(pigIt('Pig latin is cool'));
+// console.log(pigIt('Hello world !'));
+
+/* 
+Challenge Twelve: 
+Challenge Source:
+*/
+
+export class Challenge {
+  static solution(number: number) {
+    let sum = 0;
+    if (number <= 0) {
+      return 0;
+    } else {
+      for (let i = 1; i < number; i++) {
+        if (i % 3 == 0 || i % 5 == 0) {
+          sum += i;
+        }
+      }
+      return sum;
+    }
+  }
+}
+
+// TESTS
+console.log(Challenge.solution(10));
+console.log(Challenge.solution(35));
+console.log(Challenge.solution(65));
